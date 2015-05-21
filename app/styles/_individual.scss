@@ -1,0 +1,30 @@
+.next-prev {
+	height: 50px;
+	width: 100%;
+	margin-bottom: 10px; 
+}
+.next-prev div {
+	display: inline-block;
+	height: 48px;
+	width: 48px;
+	margin-right: 2px;
+	border-radius: 100%; 
+	position: relative;
+}
+.next-prev div a {
+	position: absolute;
+	border-radius: 100%; 
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+.text-info {
+	text-align: center;
+}
+.next-prev .next a {
+	background-image: url("/images/1.png");
+}
+.next-prev .prev a {
+	background-image: url("/images/2.png");
+}

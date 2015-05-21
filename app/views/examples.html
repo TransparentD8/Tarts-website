@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <h1>Most recent examples</h1>
+    <div class="row">
+      <div class="col-lg-3 col-sm-4 col-6" ng-repeat="tart in tarts">
+      	<a href="#/examples/{{tart.id}}" title="Image {{tart.title}}">
+      		<img ng-src="{{tart.src}}" class="thumbnail img-responsive">
+      	</a>
+      </div>
+     
+  </div>
+</div>
