@@ -1,12 +1,24 @@
+
+.img-responsive {
+	margin: auto;
+	max-width: 100%;
+	@include border-top-radius(20px);
+    @include border-bottom-radius(20px);
+}
+.ind {
+	margin: auto;
+	max-width: 100%;
+}
 .next-prev {
-	height: 50px;
+	height: 64px;
 	width: 100%;
-	margin-bottom: 10px; 
+	margin-bottom: 10px;
+	text-align: center; 
 }
 .next-prev div {
 	display: inline-block;
-	height: 48px;
-	width: 48px;
+	height: 64px;
+	width: 64px;
 	margin-right: 2px;
 	border-radius: 100%; 
 	position: relative;
@@ -27,4 +39,13 @@
 }
 .next-prev .prev a {
 	background-image: url("/images/2.png");
+}
+.next-prev .back a {
+	background-image: url("/images/3.png");
+}
+
+@media (max-width: 768px) {
+	.ind {
+		max-width:100%;
+	}
 }

@@ -10,11 +10,11 @@
 
 
 angular.module('cakeApp')
-  .controller('ExamplesIdCtrl', function ($scope, $routeParams, Tart) {
+  .controller('BirthdayIdCtrl', function ($scope, $routeParams, Tart) {
     $scope.id = $routeParams.id;
 
-	Tart.list(function(data){
-		$scope.tarts = data;
+		$scope.tarts = Tart.birthday();
+		
 		if ($scope.id < $scope.tarts.length)
 			{
 				$scope.nextSlide = parseInt($scope.id) + 1;
@@ -30,7 +30,7 @@ angular.module('cakeApp')
 			}
 		else
 			{
-				$scope.prevSlide = 10;
+				$scope.prevSlide = $scope.tarts.length;
 			}
 
     	$scope.tart = $scope.tarts.filter(function(value){
@@ -38,4 +38,4 @@ angular.module('cakeApp')
 
     	})[0];
     });
-  });
+ 

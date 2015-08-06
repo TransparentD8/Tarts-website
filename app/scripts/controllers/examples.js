@@ -13,11 +13,10 @@ angular.module('cakeApp')
   	$scope.isActive = function(route) {
         return route === $location.path();
     };
-  	Tart.list(function(data){
-  		$scope.tarts = data;
-  		
-  	});
-  	
+  	$scope.fruits = Tart.fruits();
+    $scope.birthday = Tart.birthday();
+  	$scope.casual = Tart.casual();
+    
 
     }]);
 

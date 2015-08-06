@@ -1,0 +1,24 @@
+.expl {
+	text-align: center;
+	.expl-title {
+		font-family: $georgia;
+		color: #A9A9A9;
+	}
+}
+.examples-title, .examples-text {
+	color: #6D6363;
+	font-family: $georgia;
+}
+
+// items in examples
+.scalable {
+	transform: scale(1);
+	transition: all 0.3s ease-in-out;
+	margin: 10px;
+	&:hover {
+		transform: scale(1.1);
+	}
+}
+.repeater {
+	margin: 60px;
+}

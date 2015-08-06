@@ -1,0 +1,12 @@
+<div class="container-fluid">
+	<div class="row expl">
+		<h1 class="expl-title">Most recent examples</h1>
+		<div class="repeater row">
+			<div class="col-sm-3" ng-repeat="tart in fruits">
+				<a href="#/fruits/{{tart.id}}" title="Image {{tart.title}}">
+					<img ng-src="{{tart.src}}" class="thumbnail img-responsive with-radius scalable">
+				</a>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,43 @@
+<div class="container-fluid">
+	<div class="next-prev">
+		<div class="back">
+			<a href="#/fruits/"></a>
+		</div>
+
+		<div class="prev">
+			<a href="{{'#/fruits/' + prevSlide}}"></a>
+		</div>
+
+		<div class="next">
+			<a href="{{'#/fruits/' + nextSlide}}"></a>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<img ng-src="{{tart.src}}" alt=".." class="img-responsive ind">
+	</div>
+	<div id="form-main" class="col-md-6">
+		<div id="form-div">
+			<form class="form" id="form1" method="post" action="http://formspree.io/prozrachniy@gmail.com">
+
+				<p class="name">
+					<input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" />
+				</p>
+
+				<p class="email">
+					<input name="_replyto" type="email" class="validate[required,custom[email]] feedback-input label-1" id="email" placeholder="Email" />
+				</p>
+
+				<p class="text">
+					<textarea name="text" class="validate[required,length[6,300]] feedback-input label-2" id="comment" placeholder="Comment"></textarea>
+				</p>
+
+
+				<div class="submit">
+					<input type="submit" value="SEND" id="button-blue" class="label-3"/>
+					<div class="ease"></div>
+				</div>
+			</form>
+		</div>
+		<p class="text-info">{{tart.title}}</p>
+	</div>
+</div>

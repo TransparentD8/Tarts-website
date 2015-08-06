@@ -1,0 +1,217 @@
+#main {
+	padding: 0;
+	.main {
+		height: auto;
+		text-align: center;
+		.main-header {
+			height: 520px;
+			background-color: azure;
+			text-align: center ;
+			margin: 50px 0;  
+			border-top: 1px solid #e7e7e7;
+			border-bottom: 1px solid #e7e7e7; 
+
+
+			.main-name {
+				text-align: right;
+				margin: 0 10px;
+				font-family: $monospace;
+				letter-spacing: 1.8;
+				text-transform: uppercase;
+				color: #777;
+			}
+			.logo {
+				display: inline-block;
+			}
+		}
+		.main-examples {
+			width: 100%;
+			.example {
+				text-align: center;
+				.main-img {
+					display: inline-block;
+					position: relative;
+					margin: 10px 30px;
+					height: 400px;
+					width: 320px;
+
+					.example-image {
+						display: inline-block;
+						position: absolute;
+						left: 0;
+						bottom: 0;
+						transition: all 0.3s ease-in-out;
+						&:hover {
+							transform: scale(1.1);
+						}
+					}
+				}
+				@for $i from 1 through 3 {
+					.frame-#{$i} {
+						display: inline-block;
+						height: 400px;
+						width: 490px;
+						background-image: url("/images/frame/frame-#{$i}.png");
+						background-position: bottom;
+						background-repeat: no-repeat;
+					} 
+				@media (max-width: 1385px) {
+					.frame-#{$i} {
+						width: 288px;
+						background-image: url("/images/frame/framesm-#{$i}.png")
+					}
+				}		
+				@media (max-width: 985px) {
+					.frame-#{$i} {
+						width: 144px;
+						background-image: url("/images/frame/frametiny-#{$i}.png")
+					}
+				}
+				@media (max-width: 693px) {
+					.frame-#{$i} {
+						display: none;
+					}
+					.main-img {
+						margin: 0;
+						.example-image {
+							position: static !important;
+							height: 80%;
+							width: 80%;
+						}
+					}
+				}				
+				}
+				.example-blurb {
+					color: #DA4FA0;
+					padding: 10px;
+					margin: 20px 100px;
+					border: 1px solid #e7e7e7;
+					background-color: azure;
+					font-family: cursive;
+					font-size: 20px;
+					@include border-top-radius(20px);
+					@include border-bottom-radius(20px);
+				}				
+			}
+		}
+		.main-testimonials {
+			display: inline-block;
+			width: 650px;
+			height: 400px;
+			margin: 100px;
+			h2 {
+				color: #DA4FA0;
+				font-family: cursive;
+			}
+			.fb-carousel {
+				height: 100%;
+				width: 100%;
+				margin: 100px 0;
+				.fb-slide {
+					margin-top: 30px;
+					height: 100%;
+					width: 100%;
+					.fb-face {
+						display: inline-block;
+						margin-right: 5px;
+						float: left;
+						padding-left: 35px;
+						img {
+							@include border-top-radius(50%);
+							@include border-bottom-radius(50%);
+							border: 7px solid azure;
+						}
+						.face-text {
+							text-align: right;
+							padding-right: 10px;
+							font-family: $georgia;
+							h3 {
+								display: inline-block;
+								margin: 0;
+							}
+							p {
+								font-size: 14px;
+								color: grey;
+							}
+						}
+					}
+					.fb-text {
+						width: 50%;
+						display: inline-block;
+						margin-top: 10px;
+						background-color: azure;
+						@include border-top-radius(10px);
+						@include border-bottom-radius(10px);
+
+						.quotes {
+							display: inline-block;
+						}
+						p {
+							width: 90%;
+							display: inline-block;
+							float: right;
+							padding-top: 7px;
+							margin-left: 6px;
+							text-align: left;
+							font-family: cursive;
+						}
+					}
+				}
+			}
+		}
+	}
+}	
+@media (max-width: 875px) {
+	.main-testimonials {
+		margin: 0 !important;
+	}
+}
+
+
+@media (max-width: 693px) {
+	.main {
+		overflow: hidden;
+	}
+	.main-header .main-name {
+			text-align: center !important;
+			margin: 0 !important;
+	}
+	.example-blurb {
+		border-radius: 0 !important;
+		margin: 20px 0 !important;
+	}
+	.logo img {
+		height: 80%;
+		width: 80%;
+	}
+	
+}
+@media	(max-width: 600px) {
+	.main-testimonials {
+		text-align: left;
+		h2 {
+			font-size: 20px !important;
+			padding-left: 20px !important;
+		}
+		.fb-carousel {
+			margin: 50px 0 !important;
+			.fb-slide {
+				text-align: left !important;
+				margin: 30px;
+				.fb-face {
+					display: block !important;
+					float: none !important;
+					.face-text {
+						text-align: left !important;
+					}
+				}
+						
+				.fb-text {
+					width: 40% !important;
+					padding: 0 !important;
+				}
+				
+			}
+		}	
+	}
+}

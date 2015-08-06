@@ -1,14 +1,59 @@
-$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
+@import "bourbon/bourbon";
 
 @import 'individual';
+@import 'mainpage';
+@import 'examples';
+@import 'about';
 
-.img-responsive {
-  border: 2px solid grey;
-  border-radius: 4px;
-}
+
+
+/* animation */
+  .reveal-animation.ng-enter {
+    -webkit-animation: Fade-Enter-Anime 0.5s;
+    -moz-animation: Fade-Enter-Anime 0.5s;
+    animation: Fade-Enter-Anime 0.5s;
+  }
+  .reveal-animation.ng-leave {
+    -webkit-animation: Fade-Leave-Anime 0s;
+    -moz-animation: Fade-Leave-Anime 0s;
+    animation: Fade-Leave-Anime 0s;
+  }
+
+  @keyframes Fade-Enter-Anime {
+       from { opacity: 0; }
+       to { opacity: 1; }
+     }
+
+  @keyframes Fade-Leave-Anime {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+
+
+  @-webkit-keyframes Fade-Enter-Anime {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @-webkit-keyframes Fade-Leave-Anime {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+
+  @-moz-keyframes Fade-Enter-Anime {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @-moz-keyframes Fade-Leave-Anime {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+
 
 .browsehappy {
   margin: 0.2em 0;
@@ -20,18 +65,23 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 body {
   padding: 0;
 }
+#form-main {
+  margin: 30px 0;
+}
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
 .footer {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 0;
+  padding-right: 0;
+
 }
 
 /* Custom page header */
 .header {
   margin-bottom: 10px;
+  
 
   /* Make the masthead heading the same height as the navigation */
   h3 {
@@ -53,7 +103,7 @@ body {
   margin: 30px 0;
 }
 
-/* Main marketing message and sign up button */
+Main marketing message and sign up button
 .jumbotron {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
